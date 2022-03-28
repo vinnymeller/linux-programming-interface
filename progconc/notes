@@ -1,0 +1,2 @@
+I don't know if this is the correct way to do it, but `syscall_speed.c` mentions that we should compile with -DNOSYSCALL to compile using the non-syscall function. The Makefile.inc file up a directory defines CFLAGS but no LDFLAGS. Not sure if this would be a bad practice but the way I compiled it one way or the other was with:
+    LDFLAGS="-DNOSYSCALL" make all
